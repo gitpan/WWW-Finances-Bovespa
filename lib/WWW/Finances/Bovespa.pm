@@ -8,7 +8,7 @@ use XML::XPath::XMLParser;
 BEGIN {
     use Exporter ();
     use vars qw($VERSION @ISA @EXPORT @EXPORT_OK %EXPORT_TAGS);
-    $VERSION     = '0.03';
+    $VERSION     = '0.04';
     @ISA         = qw(Exporter);
     #Give a hoot don't pollute, do not export more than needed by default
     @EXPORT      = qw();
@@ -19,7 +19,7 @@ BEGIN {
 
 #################### subroutine header begin ####################
 
-=head2 sample_function
+=head2 Example
 
  Usage     : my $cotacao = WWW::Finances::Bovespa->new( 'PETR3' );
              print $cotacao->{ _codigo };
@@ -33,7 +33,7 @@ BEGIN {
              print $cotacao->{ _valor_ultimo };
              print $cotacao->{ _quant_neg };
              print $cotacao->{ _mercado };
- Purpose   : Busca valor atual de ações na bolsa da bovespa.
+ Purpose   : Busca valor atual de acoes na bolsa da bovespa.
  Returns   : Returns a Bovespa obj which is a hash ref with the values obtained.
 
 
