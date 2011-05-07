@@ -16,7 +16,7 @@ my $object = WWW::Finances::Bovespa->new ( $stock_code );
 isa_ok ( $object, 'WWW::Finances::Bovespa' );
 
 is ( defined $object->{ _codigo } , 1 , 'is defined' );
-my $is_match = $object->{ _codigo } =~ m/^(.{1,1}?)$stock_code/;
+my $is_match = $object->{ _codigo } =~ m/$stock_code$/;
 is ( 1 , $is_match , 'verify if the it has found any code' );
 is ( valid_bovespa_hash_v1( $object ), 1, 'validate the hash result for v1' );
 
