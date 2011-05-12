@@ -8,7 +8,7 @@ use XML::XPath::XMLParser;
 BEGIN {
     use Exporter ();
     use vars qw($VERSION @ISA @EXPORT @EXPORT_OK %EXPORT_TAGS);
-    $VERSION     = '0.05';
+    $VERSION     = '0.06';
     @ISA         = qw(Exporter);
     #Give a hoot don't pollute, do not export more than needed by default
     @EXPORT      = qw();
@@ -88,7 +88,7 @@ sub new
 
 =head1 NAME
 
-WWW::Finances::Bovespa - Use WWW::Finances::Bovespa to access stock options values directly from bovespa ( w/ 15min lag ).
+DEPRECATED! Use WWW::Finances::Bovespa2 instead. This version will remain for whoever is using it...
 
 =head1 SYNOPSIS
 
@@ -153,3 +153,4 @@ LICENSE file included with this module.
 
 
 1;
+

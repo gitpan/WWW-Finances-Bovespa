@@ -39,3 +39,4 @@ sub valid_bovespa_hash_v1 {
     return 0 if ! exists $bovespa->{ _mercado };
     return 1;
 }
+
