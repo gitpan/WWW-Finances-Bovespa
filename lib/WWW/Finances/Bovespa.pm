@@ -80,8 +80,8 @@ sub new
 
 =head1 NAME
 
-  DEPRECATED! Use WWW::Finances::Bovespa2 instead which is moosified. 
-  But this version will keep working.
+  WWW::Finances::Bovespa DEPRECATED! Use WWW::Finances::Bovespa2 instead which is moosified. 
+  
 
 =head1 SYNOPSIS
 
