@@ -3,12 +3,11 @@ use strict;
 use warnings;
 use WWW::Mechanize;
 use XML::XPath;
-use XML::XPath::XMLParser;
 
 BEGIN {
     use Exporter ();
     use vars qw($VERSION @ISA @EXPORT @EXPORT_OK %EXPORT_TAGS);
-    $VERSION     = '0.07';
+    $VERSION     = '0.08';
     @ISA         = qw(Exporter);
     #Give a hoot don't pollute, do not export more than needed by default
     @EXPORT      = qw();
@@ -17,33 +16,26 @@ BEGIN {
 }
 
 
-#################### subroutine header begin ####################
+=head2 Usage
 
-=head2 Example
-
- Usage     : my $cotacao = WWW::Finances::Bovespa->new( 'PETR3' );
-             print $cotacao->{ _codigo };
-             print $cotacao->{ _descricao };
-             print $cotacao->{ _codigo };
-             print $cotacao->{ _ibovespa };
-             print $cotacao->{ _delay };
-             print $cotacao->{ _data };
-             print $cotacao->{ _hora };
-             print $cotacao->{ _oscilacao };
-             print $cotacao->{ _valor_ultimo };
-             print $cotacao->{ _quant_neg };
-             print $cotacao->{ _mercado };
- Purpose   : Busca valor atual de acoes na bolsa da bovespa.
- Returns   : Returns a Bovespa obj which is a hash ref with the values obtained.
-
+ use WWW:Finances::Bovespa
+ my $cotacao = WWW::Finances::Bovespa->new( 'PETR3' );
+ print $cotacao->{ _codigo };
+ print $cotacao->{ _descricao };
+ print $cotacao->{ _codigo };
+ print $cotacao->{ _ibovespa };
+ print $cotacao->{ _delay };
+ print $cotacao->{ _data };
+ print $cotacao->{ _hora };
+ print $cotacao->{ _oscilacao };
+ print $cotacao->{ _valor_ultimo };
+ print $cotacao->{ _quant_neg };
+ print $cotacao->{ _mercado };
 
 
 See Also   : http://www.bovespa.com.br
 
 =cut
-
-#################### subroutine header end ####################
-
 
 sub new
 {
@@ -88,36 +80,14 @@ sub new
 
 =head1 NAME
 
-  DEPRECATED! Use WWW::Finances::Bovespa2 instead. This version will remain for whoever is using it...
+  DEPRECATED! Use WWW::Finances::Bovespa2 instead which is moosified. 
+  But this version will keep working.
 
 =head1 SYNOPSIS
 
-  use WWW::Finances::Bovespa and check out the latest and greatest stock options directly from BOVESPA
+  WWW::Finances::Bovespa reads the latest stock options values directly 
+  from BOVESPA.com.br
   Be aware that these values always have a 15min delay. 
-  If you find some way to work with 0sec delay let me know.
-  If this works for you , enjoy!
-
-
-=head1 DESCRIPTION
-
-  Surprisingly, i did not find any module on CPAN that would read values directly from BOVESPA.
-  So here it is! Now cpan is almost complete.
-
-=head1 USAGE
-
-  use WWW:Finances::Bovespa
-  my $cotacao = WWW::Finances::Bovespa->new( 'PETR3' );
-  print $cotacao->{ _codigo };
-  print $cotacao->{ _descricao };
-  print $cotacao->{ _codigo };
-  print $cotacao->{ _ibovespa };
-  print $cotacao->{ _delay };
-  print $cotacao->{ _data };
-  print $cotacao->{ _hora };
-  print $cotacao->{ _oscilacao };
-  print $cotacao->{ _valor_ultimo };
-  print $cotacao->{ _quant_neg };
-  print $cotacao->{ _mercado };
 
 =head1 BUGS
 

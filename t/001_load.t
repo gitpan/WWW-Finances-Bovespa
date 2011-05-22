@@ -2,13 +2,12 @@
 
 # t/001_load.t - check module loading and create testing directory
 
-use Test::More tests => 10;
+use Test::More tests => 9;
 
 BEGIN {
     use_ok( 'WWW::Finances::Bovespa' ); 
     use_ok( 'WWW::Mechanize' );
     use_ok( 'XML::XPath' );
-    use_ok( 'XML::XPath::XMLParser' );
 }
 
 my $stock_code = 'PETR3';
